@@ -37,7 +37,9 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          ls -la dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
