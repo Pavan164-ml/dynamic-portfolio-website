@@ -38,7 +38,9 @@ jobs:
 
       - name: Build
         run: |
+          set -e
           npm run build
+          echo "Build completed"
           ls -la dist/
 
       - name: Setup Pages
